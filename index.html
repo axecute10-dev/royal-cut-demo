@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Cut Salon | Premium Men's Grooming & Barbershop</title>
+    
+    <!-- SEO & AI SEO Meta Tags -->
+    <meta name="description" content="Royal Cut Salon is the premier barber shop and men's parlour. Experience our premium packages, from classic haircuts to wedding grooming. Book your slot online.">
+    <meta name="keywords" content="barber shop, men's parlour, haircut, shave, wedding grooming, premium barbershop, Royal Cut Salon">
+    <meta name="author" content="Royal Cut Salon">
+    
+    <!-- Open Graph (For Social Media Sharing) -->
+    <meta property="og:title" content="Royal Cut Salon | Look Like a King">
+    <meta property="og:description" content="Premium grooming and classic cuts. Scan, book, and secure your digital serial today.">
+    <meta property="og:type" content="website">
+
+    <!-- JSON-LD for AI SEO (Local Business) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BarberShop",
+      "name": "Royal Cut Salon",
+      "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=1200",
+      "@id": "",
+      "url": "https://royalcutsalonbd.com",
+      "telephone": "+8801805455811",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BD"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Variables for Premium Theme */
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-card: #151515;
+            --gold: #D4AF37;
+            --gold-hover: #f1c94a;
+            --text-main: #f5f5f5;
+            --text-muted: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid var(--gold);
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            color: var(--gold);
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=1200') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--gold);
+            color: #000;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--gold);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        /* General Section Styling */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+            margin: 10px auto 0;
+        }
+
+        /* Packages Section */
+        .packages-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .package-card {
+            background-color: var(--bg-card);
+            border: 1px solid #333;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .package-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .package-content {
+            padding: 20px;
+        }
+
+        .package-title {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 5px;
+        }
+
+        .package-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .package-features {
+            list-style: none;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .package-features li {
+            margin-bottom: 8px;
+        }
+
+        .package-features li::before {
+            content: "👑 ";
+            font-size: 0.8rem;
+        }
+
+        .special-package {
+            border: 2px solid var(--gold);
+            background: linear-gradient(145deg, #151515, #1f1a05);
+        }
+
+        /* Booking Section */
+        .booking-section {
+            background-color: var(--bg-card);
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+        }
+
+        .booking-note {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Reviews Section */
+        .review-card {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            border-left: 3px solid var(--gold);
+        }
+
+        .stars {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        /* About Section */
+        .about-text {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050505;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid var(--gold);
+        }
+
+        .social-links {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .copyright a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .copyright a:hover {
+            text-decoration: underline;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        /* Desktop Adjustments (Tablet and PC) */
+        @media (min-width: 768px) {
+            .hero h1 { font-size: 4.5rem; }
+            .packages-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                max-width: 1200px;
+            }
+            .package-card {
+                width: calc(50% - 25px); /* 2 columns on tablet */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .package-card {
+                width: calc(25% - 25px); /* 4 columns on desktop */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">ROYAL CUT</a>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section class="hero">
+        <h1>Royal Cut Salon</h1>
+        <p>Premium Men's Grooming & Parlour</p>
+        <a href="#booking" class="btn">Book Your Slot</a>
+    </section>
+
+    <!-- 2. Packages Section -->
+    <section id="packages">
+        <h2 class="section-title">Our Packages</h2>
+        <div class="packages-container">
+            
+            <!-- Regular Package -->
+            <div class="package-card">
+                <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&q=80&w=600" alt="Regular Haircut" class="package-img">
+                <div class="package-content">
+                    <h3 class="package-title">Regular</h3>
+                    <p class="package-desc">Classic grooming</p>
+                    <ul class="package-features">
+                        <li>Expert Haircut</li>
+                        <li>Precision Styling</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Standard Package -->
+            <div class="package-card">
+                <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&q=80&w=600" alt="Haircut and Shave" class="package-img">
+                <div class="package-content">
+                    <h3 class="package-title">Standard</h3>
+                    <p class="package-desc">The gentleman's choice</p>
+                    <ul class="package-features">
+                        <li>Expert Haircut</li>
+                        <li>Traditional Shave</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Premium Package -->
+            <div class="package-card">
+                <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=600" alt="Premium Facial and Haircut" class="package-img">
+                <div class="package-content">
+                    <h3 class="package-title">Premium</h3>
+                    <p class="package-desc">Total rejuvenation</p>
+                    <ul class="package-features">
+                        <li>Haircut & Shave</li>
+                        <li>Face Wash</li>
+                        <li>Glowing Treatment</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Special Wedding Package -->
+            <div class="package-card special-package">
+                <img src="https://images.unsplash.com/photo-1593702288056-7927b442d0fa?auto=format&fit=crop&q=80&w=600" alt="Wedding Grooming" class="package-img">
+                <div class="package-content">
+                    <h3 class="package-title">Special Wedding</h3>
+                    <p class="package-desc">Look royal on your big day</p>
+                    <ul class="package-features">
+                        <li>Complete Groom Styling</li>
+                        <li>Premium Facial</li>
+                        <li>Head Massage</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. Booking Section -->
+    <section id="booking" class="booking-section">
+        <h2 class="section-title">Secure Your Serial</h2>
+        <p class="booking-note">Name and Phone number are required. <br>Your data is securely saved to our system.</p>
+        <!-- REPLACE THE URL BELOW WITH YOUR ACTUAL GOOGLE FORM LINK -->
+        <a href="https://forms.gle/your-google-form-link-here" target="_blank" class="btn">Open Booking Form</a>
+    </section>
+
+    <!-- 4. Reviews Section -->
+    <section id="reviews">
+        <h2 class="section-title">Client Reviews</h2>
+        
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Best barber shop in town. The discipline and hygiene are top-notch. The QR code booking system saves so much time!"</p>
+            <br>
+            <p style="color: var(--gold); font-weight: 600;">- Rahim A.</p>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Took the Premium package before my wedding. The glowing facial and hot towel shave made me feel like a king."</p>
+            <br>
+            <p style="color: var(--gold); font-weight: 600;">- Tanvir H.</p>
+        </div>
+    </section>
+
+    <!-- 5. About Us Section -->
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+        <p class="about-text">
+            Welcome to Royal Cut Salon. We are not just a barbershop; we are a sanctuary for the modern gentleman. 
+            Our expert barbers blend classic techniques with modern style. We enforce strict hygiene, punctuality, 
+            and exceptional customer care. Look like a King, because you deserve the standard of royalty.
+        </p>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://facebook.com/royalcutsalonbd" target="_blank">Facebook</a>
+            <a href="https://instagram.com/royalcutsalonbd" target="_blank">Instagram</a>
+            <a href="https://tiktok.com/@royalcutsalonbd" target="_blank">TikTok</a>
+        </div>
+        <p class="copyright">
+            C - ROYAL CUT SALON BY <a href="https://quickfixx24.com" target="_blank" rel="noopener">@quickfixx24</a>
+        </p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/8801805455811" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+    </a>
+
+</body>
+</html>
